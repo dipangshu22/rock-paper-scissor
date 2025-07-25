@@ -53,3 +53,10 @@ img:hover{
     font-size: 4rem;
     margin-top: 1rem;
 }
+#msg{
+   
+    background-color: rgb(14, 16, 12);
+    color: aliceblue;
+    display: inline;
+    border-radius: 4px;
+}
