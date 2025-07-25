@@ -3,6 +3,8 @@ let user_score=0
 let cpu_score=0
 const choices=document.querySelectorAll(".pic")
 const msg=document.querySelector("#msg")
+const user_score_para=document.querySelector(".user_score")
+const cpu_score_para=document.querySelector(".cpu_score")
 
 mode.addEventListener('click', function() {
     if (document.body.style.backgroundColor === 'black') {
@@ -28,11 +30,15 @@ const drawgame=()=>{
 
 const showwinner=(user,userchoice,cpu_choice)=>{
     if(user){
+        user_score++
+        user_score_para.innerText=user_score
         msg.innerText=`${userchoice} beats ${cpu_choice} : you win!🫡`
         msg.style.backgroundColor = 'green'
 
     }
     else{
+        cpu_score++
+        cpu_score_para.innerText=cpu_score
         msg.innerText=`${cpu_choice} beats ${userchoice}  :you loose!🥹`
         msg.style.backgroundColor = 'red'
     }
